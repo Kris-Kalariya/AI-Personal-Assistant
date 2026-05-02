@@ -86,26 +86,19 @@ http://127.0.0.1:5000
 ```
 
 📸 UI Preview
-Clean chat interface
-Light modern design
-User-friendly interaction
-
-📌 Future Improvements
-🎤 Voice input support
-🌐 Multi-language support
-🧾 Chat history storage (DB)
-📱 Mobile responsive UI improvements
-🔐 User authentication system
+- Clean chat interface
+- Light modern design
+- User-friendly interaction
 
 🧑‍💻 Author
-Kris Kalariya
-GitHub: https://github.com/Kris-Kalariya
+- Kris Kalariya
+- GitHub: https://github.com/Kris-Kalariya
 
 ⭐ Contribution
-Feel free to fork this repo and improve it!
+- Feel free to fork this repo and improve it!
 
 📜 License
-This project is open-source and available under the MIT License.
+- This project is open-source and available under the MIT License.
 ---
 
 # ✅ 6. GitHub Push Commands
