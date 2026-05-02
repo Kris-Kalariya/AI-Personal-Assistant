@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Personal Assistant</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <h1 class="main-heading">AI Personal Assistant</h1>
+
+    <div class="container">
+      <h2>Ask Anything</h2>
+      <form action="" id="askForm">
+        <input
+          type="text"
+          name="question"
+          placeholder="Ask Anything....."
+          required
+        />
+        <button type="submit">Ask</button>
+      </form>
+      <p id="ask-loading" style="display: none">Processing..</p>
+      <p id="answer"></p>
+
+      <h2>Summarize Email</h2>
+      <form action="" id="emailForm">
+        <textarea
+          type="text"
+          name="question"
+          placeholder="Paste your email hear....."
+          required
+        ></textarea>
+        <button type="submit">Summarize</button>
+      </form>
+      <p id="summary-loading" style="display: none">Processing..</p>
+      <p id="summary"></p>
+    </div>
+  </body>
+</html>
