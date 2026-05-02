@@ -23,14 +23,14 @@
         />
         <button type="submit">Ask</button>
       </form>
-      <p id="ask-loading" style="display: none">Processing..</p>
+      <p id="ans-loading" style="display: none">Processing..</p>
       <p id="answer"></p>
 
       <h2>Summarize Email</h2>
       <form action="" id="emailForm">
         <textarea
           type="text"
-          name="question"
+          name="email"
           placeholder="Paste your email hear....."
           required
         ></textarea>
@@ -39,5 +39,43 @@
       <p id="summary-loading" style="display: none">Processing..</p>
       <p id="summary"></p>
     </div>
+
+    <script>
+      document.getElementById("askForm").onsubmit = async (e) => {
+        e.preventDefault();
+        let formData = new FormData(e.target);
+
+        let loading = document.getElementById("ans-loading");
+        loading.style.display = "block"; // show loader
+
+        let res = await fetch("/ask", {
+          method: "POST",
+          body: formData,
+        });
+
+        let data = await res.json();
+        document.getElementById("answer").innerText = data.response;
+
+        loading.style.display = "none"; // hide loader
+      };
+
+      document.getElementById("emailForm").onsubmit = async (e) => {
+        e.preventDefault();
+        let formData = new FormData(e.target);
+
+        let loading = document.getElementById("summary-loading");
+        loading.style.display = "block";
+
+        let res = await fetch("/summarize", {
+          method: "POST",
+          body: formData,
+        });
+
+        let data = await res.json();
+        document.getElementById("summary").innerText = data.response;
+
+        loading.style.display = "none"; // hide loader
+      };
+    </script>
   </body>
 </html>
